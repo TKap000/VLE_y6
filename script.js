@@ -60,6 +60,8 @@
         let dhl = document.getElementById("v4").checked;
         let ups = document.getElementById("v5").checked;
         let post = document.getElementById("v6").checked;
+        let eesnimi = document.getElementById("fname").value;
+        let perekonnanimi = document.getElementById("lname").value;
         let hind = 0;
 
 
@@ -90,21 +92,28 @@
             if (kontaktivaba.checked) {
                 hind = hind + 1.00;
             }
-            if (document.getElementById("fname").value == "") {
+            if (eesnimi == "") {
                 alert("Palun sisestage nimi");
                 linn.focus();
                 return;
             }
-            if (document.getElementById("lname").value == "") {
+            if (perekonnanimi == "") {
                 alert("Palun sisestage perekonnanimi");
                 linn.focus();
                 return;
             }
-            // if (document.getElementById("fname").value == isNaN) {
-            //     alert("Numbrid ei sobi siia lahtrisse");
-            //     linn.focus();
-            //     return;
-            // }
+            if (!isNaN(eesnimi)) {
+                alert("Nimi ei tohi sisaldada numbreid");
+                linn.focus();
+                return;
+            }
+            if (!isNaN(perekonnanimi)) {
+                alert("Perenimi ei tohi sisaldada numbreid");
+                linn.focus();
+                return;
+            }
+
+
             console.log(smartpost);
             if ((smartpost || dhl || ups || post) == false) {
                 alert("Palun valige tarneviis");
@@ -129,6 +138,7 @@
 // map
 
 //let mapAPIKey = "AqLLRE37SJGqIxXEYxezPUa6fF2oCzl3cvG4n05FtFIVBrotBYxchpMYYpwuxBak";
+// Tegin endale konto ja sain oma API võtme
 let mapAPIKey = "AggFoSRoUGUYRPC79y6YYlfHbkl5CMkKnQB5KejIeBQqSmioIDSkgEgpcjADrHN6";
 
 let map;
