@@ -88,3 +88,13 @@ input[type=submit] {
     height: 300px;
     margin: auto;
 }
+
+/* siin on minu looming */
+
+#radio {
+    margin-left: 30px;
+    padding: 5px;
+    padding-top: 1px;
+    font-size: 20px;
+    accent-color: red;
+}

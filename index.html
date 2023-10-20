@@ -50,6 +50,29 @@
                             <option value="prn">P&auml;rnu</option> <!-- 3€ --->
                         </select>
                     </div>
+
+                    <!-- raadionuppudega (radio buttons) --->
+                    <div id="radio">
+                        <label for="tarne">Tarneviis:</label>         
+                        <div class="radio">
+                            <input type="radio" id="v3" name="v3" value="smartpost">
+                            <label for="vehicle3"> Smartpost</label> <!-- 2.5€ --->
+                        </div>
+                        <div class="radio">
+                            <input type="radio" id="v4" name="v3" value="dpd">
+                            <label for="vehicle4"> DPD</label> <!-- 2.5€ --->
+                        </div>
+                        <div class="radio">
+                            <input type="radio" id="v5" name="v3" value="omniva">
+                            <label for="vehicle5"> Omniva</label> <!-- 2.5€ --->
+                        </div>
+                        <div class="radio">
+                            <input type="radio" id="v6" name="v3" value="post">
+                            <label for="vehicle6"> Postkontor</label> <!-- 3€ --->
+                        </div>
+                    </div>
+
+
                     <div id="calc">
                         <input type="submit" value="Arvuta tarne hind:" id="btn-delivery">   
                     </div>
@@ -62,7 +85,10 @@
                 <div id="map"></div>
             </section>
         </main>
+        <script type='text/javascript' src='https://www.bing.com/api/maps/mapcontrol?callback=GetMap&key=[AggFoSRoUGUYRPC79y6YYlfHbkl5CMkKnQB5KejIeBQqSmioIDSkgEgpcjADrHN6]' async defer></script>
+        
         <script type='text/javascript' src="script.js"></script>
-        <script type='text/javascript' src='https://www.bing.com/api/maps/mapcontrol?callback=GetMap&key=[AqLLRE37SJGqIxXEYxezPUa6fF2oCzl3cvG4n05FtFIVBrotBYxchpMYYpwuxBak]' async defer></script>
+        
+        
     </body>
 </html>
