@@ -57,8 +57,8 @@
         let kingitus = document.getElementById("v1");
         let kontaktivaba = document.getElementById("v2");
         let smartpost = document.getElementById("v3").checked;
-        let dhl = document.getElementById("v4").checked;
-        let ups = document.getElementById("v5").checked;
+        let dpd = document.getElementById("v4").checked;
+        let omniva = document.getElementById("v5").checked;
         let post = document.getElementById("v6").checked;
         let eesnimi = document.getElementById("fname").value;
         let perekonnanimi = document.getElementById("lname").value;
@@ -83,6 +83,7 @@
             alert("Palun valige linn nimekirjast");
             linn.focus();
             return;
+        
 
         } else {
 
@@ -94,35 +95,33 @@
             }
             if (eesnimi == "") {
                 alert("Palun sisestage nimi");
-                linn.focus();
+                eesnimi.focus();
                 return;
             }
             if (perekonnanimi == "") {
                 alert("Palun sisestage perekonnanimi");
-                linn.focus();
+                perekonnanimi.focus();
                 return;
             }
             if (!isNaN(eesnimi)) {
                 alert("Nimi ei tohi sisaldada numbreid");
-                linn.focus();
+                eesnimi.focus();
                 return;
             }
             if (!isNaN(perekonnanimi)) {
                 alert("Perenimi ei tohi sisaldada numbreid");
-                linn.focus();
+                perekonnanimi.focus();
                 return;
             }
 
 
             console.log(smartpost);
-            if ((smartpost || dhl || ups || post) == false) {
+            if ((smartpost || dpd || omniva || post) == false) {
                 alert("Palun valige tarneviis");
-                linn.focus();
+                smartpost.focus();
                 return;
-
+            
             } else {
-
-
                 //e.innerHTML = "x,xx &euro;";
                 e.innerHTML = hind + " &euro;";
             }
